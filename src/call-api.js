@@ -8,26 +8,15 @@ function CallApi() {
   async function getData(url){
     const response = await fetch(url, {
       method: 'GET',
-      mode: 'no-cors',
-      credentials: 'include', // include, *same-origin, omit
+      credentials: 'include'
     })
-    return 10
-    // return response.json()
+    return response.json()
   }
   
   getData(APIData)
     .then(data => {
       console.log(data)
     })
-
-/*
-  fetch(APIData, {
-    method:"GET",
-  })
-    .then(response => response.json())
-    // .then(data => console.log(`data: ${data}`))
-    .then(data => console.log(data.city))
-*/
 
   return (
     <div>
