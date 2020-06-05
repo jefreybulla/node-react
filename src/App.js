@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import HandleCookies from './HandleCookies';
 
-// const APIGet = "https://rails-auth-2020.herokuapp.com/data"
-const APIGet = "https://s1.ngrok.io/data"
+const APIGet = "https://rails-auth-2020.herokuapp.com/data"
+// const APIGet = "https://s1.ngrok.io/data"
 
 class App extends React.Component {
   
@@ -13,20 +13,24 @@ class App extends React.Component {
     this.state = {
       user : 'stranger'
     }
-    this.checkUser = this.checkUser.bind(this)
   }
 
   componentDidMount() {
     this.checkUser()
   }
 
-  checkUser() {
-    fetch(APIGet, {
+  async checkUser() {
+    const response = await fetch(APIGet, {
       method: 'GET',
       credentials: 'include'
     })
-      .then(res => res.json())
-      .then(json => this.setState({ user: json.user? json.user :'stranger'}))
+    const json = await response.json()
+
+    if (json.user) {
+      this.setState({ user: json.user })
+    }
+    console.log('Rails response ->>>')
+    console.log(json)
   }
 
   render() {
