@@ -20,7 +20,7 @@ function CallApi() {
 
   return (
     <div>
-      <p>This is CallApi</p>
+      <p>Then I send the encrypted cookie on every API request to validate the session. I only get a response if the session is valid.</p>
     </div>
   );
 }

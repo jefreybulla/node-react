@@ -5,7 +5,7 @@ import HandleCookies from './handle-cookies';
 import CallApi from './call-api';
 
 function App() {
-  const name = 'Jef'
+  const name = 'stranger'
   return (
     <div className="App">
       <header className="App-header">
@@ -13,9 +13,6 @@ function App() {
         <p>Hi {name}!</p>
         <HandleCookies />
         <CallApi />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
       </header>
     </div>
   );

@@ -17,7 +17,7 @@ function HandleCookies() {
 
   return (
     <div>
-      <p>This is HandleCookies</p>
+      <p>I am a front-end-only React app that uses the session cookie of a friendly Rails app.</p>
     </div>
   );
 }
