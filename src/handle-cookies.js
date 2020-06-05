@@ -2,11 +2,11 @@
 import React from 'react';
 
 function HandleCookies() {
-  console.log('this is handle-cookies')
+  // console.log('this is handle-cookies')
   
   // Accessing cookies. It does not work for HttpOnly cookies.
-  const allCookies = document.cookie
-  console.log(`all cookies: ${allCookies}`)
+  // const allCookies = document.cookie
+  // console.log(`all cookies: ${allCookies}`)
   
   // planting cookies
   // document.cookie = "color=red"
@@ -18,6 +18,7 @@ function HandleCookies() {
   return (
     <div>
       <p>I am a front-end-only React app that uses the session cookie of a friendly Rails app.</p>
+      <p>I send the encrypted cookie on every API request to validate the session. I only get data back if the session is valid.</p>
     </div>
   );
 }
