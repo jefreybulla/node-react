@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import HandleCookies from './handle-cookies';
-import CallApi from './call-api';
+import HandleCookies from './HandleCookies';
+import CallApi from './CallApi';
 
 function App() {
   const name = 'stranger'

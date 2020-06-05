@@ -1,11 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import HandleCookies from './handle-cookies';
-// import CallApi from './call-api';
+import HandleCookies from './HandleCookies';
 
-const APIGet = "https://rails-auth-2020.herokuapp.com/data"
-// const APIGet = "https://s1.ngrok.io/data"
+// const APIGet = "https://rails-auth-2020.herokuapp.com/data"
+const APIGet = "https://s1.ngrok.io/data"
 
 class App extends React.Component {
   
@@ -35,7 +34,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hi {this.state.user}!</p>
+          <h1>Hi {this.state.user}!</h1>
           <HandleCookies />
         </header>
       </div>
