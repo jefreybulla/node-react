@@ -11,7 +11,8 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      user : 'stranger'
+      user : null,
+      loading: true
     }
   }
 
@@ -29,16 +30,35 @@ class App extends React.Component {
     if (json.user) {
       this.setState({ user: json.user })
     }
+
+    this.setState({ loading: false })
     console.log('Rails response ->>>')
     console.log(json)
   }
 
   render() {
+    
+    if (this.state.loading) {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>Loading...</p>
+          </header>
+        </div>
+      )
+    }
+
+    let message = 'Please log in using the Rails app'
+    if (this.state.user){
+      message = `Hi ${this.state.user}!`
+    }
+
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>Hi {this.state.user}!</h1>
+          <h1>{message}</h1>
           <HandleCookies />
         </header>
       </div>
