@@ -3,7 +3,7 @@ import React from 'react'
 function CallApi() {
   console.log('this is CallApi')
   
-  const APIData = "https://rails-auth-2020.herokuapp.com"
+  const APIData = "https://rails-auth-2020.herokuapp.com/data"
 
   async function getData(url){
     const response = await fetch(url, {
