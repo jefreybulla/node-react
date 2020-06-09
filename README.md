@@ -5,6 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Purpose
 This front-end-only React app uses the session cookies of a Rails app to authenticate a user. Run in conjuction with this [Rails app](https://github.com/jefreybulla/rails-auth-bcrypt).
 
+## Demo URL
+http://react.rails.toro-labs.com/
+
 ## Install
 `npm install`
 
