@@ -50,8 +50,11 @@ class App extends React.Component {
     }
 
     let message = 'Please log in using the Rails app'
+    let authButton = null
     if (this.state.user){
       message = `Hi ${this.state.user}!`
+      // authButton = <a href='https://s1.ngrok.io/logout'>Log out</a>
+      authButton = <a href='http://rails.toro-labs.com/logout'>Log out</a>
     }
 
     return (
@@ -59,6 +62,7 @@ class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1>{message}</h1>
+          {authButton}
           <HandleCookies />
         </header>
       </div>
