@@ -25,7 +25,7 @@ $ docker build -t <your_username>/node-react-image
 ```
 Create and run container with 
 ```
-$ docker run -dp 8080:80 --name node-react-container node-react-image
+$ docker run -dp 8080:80 --name node-react-container <your_username>/node-react-image
 ```
 
 ## Domains
