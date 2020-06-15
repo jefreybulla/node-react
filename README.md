@@ -21,7 +21,7 @@ $ npm start
 ## Build and run with Docker
 Create image with
 ```
-$ docker build -t node-react-image
+$ docker build -t <your_username>/node-react-image
 ```
 Create and run container with 
 ```
