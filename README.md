@@ -9,19 +9,19 @@ This front-end-only React app uses the session cookies of a Rails app to authent
 http://react.rails.toro-labs.com/
 
 ## Install
-`npm install`
+`$ npm install`
 
 ## Run 
-`npm start`
+`$ npm start`
 
 ## Build and run with Docker
 Create image with
 ```
-docker build -t node-react-image
+$ docker build -t node-react-image
 ```
 Create and run container with 
 ```
-docker run -dp 8080:80 --name node-react-container node-react-image
+$ docker run -dp 8080:80 --name node-react-container node-react-image
 ```
 
 ## Domains
