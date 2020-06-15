@@ -14,5 +14,15 @@ http://react.rails.toro-labs.com/
 ## Run 
 `npm start`
 
+## Build and run with Docker
+Create image with
+```
+docker build -t node-react-image
+```
+Create and run container with 
+```
+docker run -dp 8080:80 --name node-react-container node-react-image
+```
+
 ## Domains
 This app should run in a subdomain of the Rails app. 
